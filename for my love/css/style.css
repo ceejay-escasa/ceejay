@@ -1,0 +1,204 @@
+:root{
+    --nav-bg-color: #00b0b6;
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-primary: #001e44;
+    --bg-color-primary: rgba(12, 53, 63, 0.116);
+    --bg-color-secondary: #35007ab8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: var(--nav-bg-color);
+    color: var(--color-white);
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > nav > ul {
+    list-style: none;
+    font-style: normal;
+    display: inline-flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+header > nav > ul > li > a:hover{
+    color:var( --color-primary);
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+}
+
+.hero  *{
+    font-size: 28px;
+}
+
+.hero > i{
+    font-size: 30px;
+    margin-right: 10px;
+
+}
+
+.hero .flex-title, 
+.hero .grid-title,
+.hero > i{
+     color: var(--color-primary);
+}
+
+
+/* Search area */
+.search-area{
+    display: flex;
+    align-items: center;
+}
+
+.search-area > button, 
+.search-area > input{
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-area > input{
+    border-radius: 10px 0 0 10px;
+}
+
+.search-area > button{
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--color-primary);
+    cursor: pointer;   
+}
+
+.search-area > button:hover{
+    opacity: 0.9;
+}
+
+section{
+    min-height: 90vh;
+}
+
+#whoami{
+    background-color: var(--bg-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#whoami .whoami-title{
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw;
+    margin-right: 20vw;
+}
+
+.profile{
+    display: flex;
+    margin-left: 10em;
+}
+
+#whoami .whoami-title h3{
+    font-size: 40px;
+}
+
+#whoami .whoami-title p{
+    font-size: 24px;
+    text-indent: 100px;
+    text-align: justify;
+    font-style: italic;
+}
+
+
+#mygallery {
+    padding: 40px 100px;
+    background-color: var(--nav-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mygallery h3 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: var(--color-white);
+}
+
+#mygallery .grid-container {
+    margin: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#mygallery .grid-container .grid-item {
+    border-radius: 0.775rem;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    border:1px solid rgba(0, 0, 0, 0.138);
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.12);
+}
+
+.bx-search{
+    color:var(--color-white);
+}
+
+#mygallery .grid-container .grid-item .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: fill;
+    padding: 10px;
+    background-color: var(--color-white);
+    transition:all 200ms ease-in-out ;
+}
+
+#mygallery .grid-container .grid-item .card:hover {
+    transform: scale(1.1);
+}
+
+#mygallery .grid-container .grid-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.775rem;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color:var(--color-primary);
+}
+
+footer > * {
+    color: var(--color-white);
+}
